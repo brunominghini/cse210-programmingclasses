@@ -4,24 +4,35 @@ class Program
 {
     static void Main(string[] args)
     {
-        string registered;
+        
         Journal journal = new Journal();
         GeneralPrompt prompt = new GeneralPrompt();
         Entry entry = new Entry();
 
-
-
-        string chose = journal.DisplayMenu();
-
-        if (chose == "1"){
+        int chose=-1;
+        while (chose != 5){
+        chose = int.Parse(journal.DisplayMenu());
+        
+        if (chose == 1){
             prompt.DisplayPrompts();
-
-            registered = journal.Add_Entry(entry.date);
+            journal.Add_Entry(Console.ReadLine());
         }
 
-        if (chose=="2"){
+        if (chose == 2){
+            journal.Display();
+        }
+
+        if (chose == 3){
+            journal.LoadJournal();
+        }
+
+        if (chose==4){
             journal.SaveJournal();
         }
-        
+
+        if (chose==5){
+            Console.WriteLine("Closing the Journal");
+        };
+        }
     }
 }

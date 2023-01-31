@@ -1,8 +1,8 @@
 
 public class Journal{
 
-public string register;
-public List<GeneralPrompt> prompts= new List<GeneralPrompt>();
+public List<String> _journal = new List<String>();
+Entry dateJournal = new Entry();
 
     public string DisplayMenu()
     {   
@@ -18,16 +18,16 @@ public List<GeneralPrompt> prompts= new List<GeneralPrompt>();
         return chose;
     }
 
-    public string Add_Entry(DateTime date)
+    public void Add_Entry(string registers)
     {
-        string register = Console.ReadLine();
-
-        return register;
+        //_journal.Add(dateJournal.date);
+        _journal.Add(registers);
     }
 
     public void Display()
     {
-        Console.WriteLine("Your registers");
+        Console.WriteLine("Your registers:");
+        Console.WriteLine ($"{_journal}");
     }
 
     public void LoadJournal()
