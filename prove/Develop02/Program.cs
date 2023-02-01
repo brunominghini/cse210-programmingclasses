@@ -1,4 +1,4 @@
-using System;
+using System.IO;
 
 class Program
 {
@@ -7,7 +7,7 @@ class Program
         
         Journal journal = new Journal();
         GeneralPrompt prompt = new GeneralPrompt();
-        Entry entry = new Entry();
+       
 
         int chose=-1;
         while (chose != 5){
@@ -32,7 +32,7 @@ class Program
 
         if (chose==5){
             Console.WriteLine("Closing the Journal");
-        };
+            };
         }
     }
 }

@@ -2,12 +2,13 @@
 
 public class Entry{
 
-    public DateTime date;
+    public DateTime Date;
+    public string Name;
 
     public DateTime EntryDate()
     {
-        date = DateTime.Now;
-        return date;
+        Date = DateTime.Now;
+        return Date;
     }
 
 }

@@ -1,11 +1,13 @@
-
+using System.IO;
 public class Journal{
 
-public List<String> _journal = new List<String>();
-Entry dateJournal = new Entry();
+public List<Entry> _journal = new List<Entry>();
+    //Entry dateJournal = new Entry();    
+
 
     public string DisplayMenu()
     {   
+        Console.WriteLine();
         Console.WriteLine("Please select the option:");
         Console.WriteLine("1.Write");
         Console.WriteLine("2.Display");
@@ -20,14 +22,18 @@ Entry dateJournal = new Entry();
 
     public void Add_Entry(string registers)
     {
-        //_journal.Add(dateJournal.date);
-        _journal.Add(registers);
+        //_journal.Add(datejournal.date);
+        _journal.Add(new Entry {Date = DateTime.Now, Name = registers});
+        Console.WriteLine();
     }
 
     public void Display()
     {
-        Console.WriteLine("Your registers:");
-        Console.WriteLine ($"{_journal}");
+        Console.WriteLine("Your registers today:");
+        foreach (var item in _journal){
+          Console.WriteLine ($"{item.Date}-{item.Name}");
+          Console.WriteLine();      
+        }    
     }
 
     public void LoadJournal()
@@ -38,6 +44,17 @@ Entry dateJournal = new Entry();
     public void SaveJournal()
     {
         Console.WriteLine("You journal is save");
+        string filename = "Journal.txt";
+        //string register;
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+        outputFile.WriteLine("Registers of Day");
+            foreach (var item in _journal){
+            //register = Convert.ToString($"{item.Date}-{item.Name}");
+            outputFile.WriteLine(Convert.ToString($"{item.Date}-{item.Name}"));
+            }
+        //outputFile.WriteLine($"{register}");
+        }
     }
 }
 
