@@ -45,11 +45,11 @@ public List<Entry> _journal = new List<Entry>();
         foreach (string line in lines)
         {
         string[] parts = line.Split("-");
-            if (parts.Length>2){
+            if (parts.Length>=2){
 
-                string Date = parts[0];
-                string Name = parts[1];
-                Console.WriteLine(parts + parts);
+                string data = parts[0];
+                string name = parts[1];
+                Console.WriteLine(data + name);
             }
         
             else
