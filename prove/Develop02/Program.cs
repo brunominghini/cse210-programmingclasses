@@ -15,7 +15,7 @@ class Program
         
         if (chose == 1){
             prompt.DisplayPrompts();
-            journal.Add_Entry(Console.ReadLine());
+            journal.Add_Entry(Console.ReadLine()+".");
         }
 
         if (chose == 2){

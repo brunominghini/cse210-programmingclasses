@@ -31,7 +31,7 @@ public List<Entry> _journal = new List<Entry>();
     {
         Console.WriteLine("Your registers today:");
         foreach (var item in _journal){
-          Console.WriteLine ($"{item.Date}-{item.Name}");
+          Console.WriteLine ($"{item.Date} - {item.Name}");
           Console.WriteLine();      
         }    
     }
@@ -44,10 +44,17 @@ public List<Entry> _journal = new List<Entry>();
 
         foreach (string line in lines)
         {
-        string[] parts = line.Split(",");
+        string[] parts = line.Split("-");
+            if (parts.Length>2){
 
-        string Date = parts[0];
-        string Name = parts[1];
+            string Date = parts[0];
+            string Name = parts[1];
+            }
+        
+            else
+            {
+                Console.WriteLine(line);
+            }
         }
     }
 
@@ -58,10 +65,10 @@ public List<Entry> _journal = new List<Entry>();
         //string register;
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
-        outputFile.WriteLine("Registers of Day");
+        outputFile.WriteLine("Registers of Day.");
             foreach (var item in _journal){
             //register = Convert.ToString($"{item.Date}-{item.Name}");
-            outputFile.WriteLine(Convert.ToString($"{item.Date}-{item.Name}"));
+            outputFile.WriteLine(Convert.ToString($"{item.Date} - {item.Name}"));
             }
         //outputFile.WriteLine($"{register}");
         }
