@@ -39,11 +39,21 @@ public List<Entry> _journal = new List<Entry>();
     public void LoadJournal()
     {
         Console.WriteLine("You journal is loading");
+        string filename = "Journal.txt";
+        string[] lines = System.IO.File.ReadAllLines(filename);
+
+        foreach (string line in lines)
+        {
+        string[] parts = line.Split(",");
+
+        string firstName = parts[0];
+        string lastName = parts[1];
+        }
     }
 
     public void SaveJournal()
     {
-        Console.WriteLine("You journal is save");
+        Console.WriteLine("You journal was saved");
         string filename = "Journal.txt";
         //string register;
         using (StreamWriter outputFile = new StreamWriter(filename))
