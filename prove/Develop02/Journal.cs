@@ -47,8 +47,9 @@ public List<Entry> _journal = new List<Entry>();
         string[] parts = line.Split("-");
             if (parts.Length>2){
 
-            string Date = parts[0];
-            string Name = parts[1];
+                string Date = parts[0];
+                string Name = parts[1];
+                Console.WriteLine(parts + parts);
             }
         
             else
