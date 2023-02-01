@@ -46,8 +46,8 @@ public List<Entry> _journal = new List<Entry>();
         {
         string[] parts = line.Split(",");
 
-        string firstName = parts[0];
-        string lastName = parts[1];
+        string Date = parts[0];
+        string Name = parts[1];
         }
     }
 
