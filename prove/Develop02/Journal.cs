@@ -49,7 +49,7 @@ public List<Entry> _journal = new List<Entry>();
 
                 string data = parts[0];
                 string name = parts[1];
-                Console.WriteLine(data + name);
+                Console.WriteLine(data +"-"+ name);
             }
         
             else
