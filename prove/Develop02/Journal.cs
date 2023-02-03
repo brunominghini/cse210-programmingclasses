@@ -38,7 +38,7 @@ public List<Entry> _journal = new List<Entry>();
 
     public void LoadJournal()
     {
-        Console.WriteLine("You journal is loading");
+        Console.WriteLine("You journal was load");
         string filename = "Journal.txt";
         string[] lines = System.IO.File.ReadAllLines(filename);
 
@@ -47,9 +47,11 @@ public List<Entry> _journal = new List<Entry>();
         string[] parts = line.Split("-");
             if (parts.Length>=2){
 
-                string data = parts[0];
-                string name = parts[1];
-                Console.WriteLine(data +"-"+ name);
+                _journal.Add(new Entry{Date = Convert.ToDateTime(parts[0]), Name = parts[1]});
+                //string data = parts[0];
+                //string name = parts[1];
+                //Console.WriteLine($"{Date} - {name}");
+                Console.WriteLine();
             }
         
             else
@@ -66,7 +68,6 @@ public List<Entry> _journal = new List<Entry>();
         //string register;
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
-        outputFile.WriteLine("Registers of Day.");
             foreach (var item in _journal){
             //register = Convert.ToString($"{item.Date}-{item.Name}");
             outputFile.WriteLine(Convert.ToString($"{item.Date} - {item.Name}"));
