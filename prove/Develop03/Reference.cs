@@ -1,22 +1,35 @@
-class Reference
+public class Reference
 {
-    private string _reference;
+    private string _verse;
+    private string _text;
 
     public Reference()
     {
     }
 
-    public Reference(string reference){
-        _reference = reference;
+    public Reference(string verse, string text){
+        _verse = verse;
+        _text = text; 
     }
 
-    public string GetReference()
+    public string GetVerse()
     {
-        return _reference;
+        return _verse;
     }
 
-    public void SetReference (string reference)
+    public void SetVerse (string verse)
     {
-        _reference = reference;
+        _verse = verse;
+
     }
+    public string GetText()
+    {
+        return _text;
+    }
+
+    public void SetText (string text)
+    {
+        _text = text;
+    }
+    
 }

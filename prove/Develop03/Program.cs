@@ -14,19 +14,23 @@ class Program
         scripture.SetScripture(Console.ReadLine());
 
         Console.WriteLine("What reference?");
-        reference.SetReference(Console.ReadLine());
-        
-        Console.WriteLine(reference.GetReference()+": "+scripture.GetScripture());
+        reference.SetVerse(Console.ReadLine());
 
-        Console.WriteLine ("to press the enter key or type quit:");
-        option = Console.ReadLine();
+        Console.WriteLine(reference.GetVerse() + reference.GetText()+": "+scripture.GetScripture());
 
         
-        /*do
+        
+        do
         {
-         Console.WriteLine(reference.GetReference()+": "+scripture.GetScripture());
+         Console.WriteLine ("to press the enter key or type quit:");
+            option = Console.ReadLine();
+            Console.WriteLine(reference.GetVerse() + reference.GetText()+": "+scripture.GetScripture());
+
         }
-        while(option == "quit");*/
+        while(option == "quit");
+        
+        Console.WriteLine("exiting");
+        
 
     
         

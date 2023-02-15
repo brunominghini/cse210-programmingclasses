@@ -4,7 +4,10 @@ class Scripture
 private string _reference;
 private string _scripture;
 
-    Reference reference = new Reference();
+    /*Reference reference = new Reference();*/
+
+    public List<Reference> Reference{get;set;}
+    
     public Scripture()
     {
     }
@@ -37,7 +40,7 @@ private string _scripture;
 
     public string GetAllScripture(){
             
-        string AllScripture = $"{_reference}:{_scripture}" ;
+        string AllScripture = $"{_scripture}" ;
         return AllScripture;
     }
 

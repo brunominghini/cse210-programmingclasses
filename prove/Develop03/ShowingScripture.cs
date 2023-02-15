@@ -13,9 +13,9 @@ class ShowingScripture{
         scripture.SetScripture(Console.ReadLine());
 
         Console.WriteLine("What reference?");
-        reference.SetReference(Console.ReadLine());
+        //reference.SetReference(Console.ReadLine());
 
-        _randomScripture = reference.GetReference()+" "+scripture.GetScripture();
+        //_randomScripture = reference.GetReference()+" "+scripture.GetScripture();
 
     }
 }
