@@ -1,43 +1,35 @@
-using System;
-class Scripture 
+using System.Linq;
+public class Scripture
 {
-private string _reference;
+
 private string _scripture;
 
     /*Reference reference = new Reference();*/
 
-    public List<Reference> Reference{get;set;}
-    
-    public Scripture()
+    public List<Reference> _Reference{get;set;}
+       
+    public Scripture(List<Reference> reference, string scripture)
     {
-    }
-    
-    public Scripture(string reference, string scripture)
-    {
-        _reference = reference;
+        _Reference = reference;
         _scripture = scripture;
     }
     
 
-    public string GetReference()
+    public Reference GetReference()
     {
-        return _reference;
+        return _Reference[1];
     }
 
-    public void SetReference (string reference)
+    public void SetScripture (string verseScripture, string textScripture)
     {
-        _reference = reference;
+        _Reference.Add (new Reference(verseScripture, textScripture ));
     }
 
     public string GetScripture()
     {
         return _scripture;
     }
-    public void SetScripture (string scripture)
-    {
-        _scripture = scripture;
-    }
-
+  
     public string GetAllScripture(){
             
         string AllScripture = $"{_scripture}" ;

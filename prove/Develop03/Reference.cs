@@ -3,10 +3,6 @@ public class Reference
     private string _verse;
     private string _text;
 
-    public Reference()
-    {
-    }
-
     public Reference(string verse, string text){
         _verse = verse;
         _text = text; 
