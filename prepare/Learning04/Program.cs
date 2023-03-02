@@ -15,6 +15,5 @@ class Program
         Console.WriteLine(writingAssignment.GetSummary());
         Console.WriteLine(writingAssignment.GetWritingInformation());
 
-
     }
 }
