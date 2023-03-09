@@ -10,12 +10,18 @@ class Program
             "teste",
             "7 days",
             false,
+            1,
+            1,
             "teste",
             "teste",
             "description",
-            "historic",
             100);
-
         
+        obj.setScore(100);
+        obj.setPoint(2);
+        
+        double pontuation = obj.GetGoal();
+        
+        Console.WriteLine(pontuation);
     }
 }

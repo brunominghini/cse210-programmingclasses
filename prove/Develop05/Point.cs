@@ -18,6 +18,10 @@ public abstract class Point:Goal
     {
         return _points;
     }
+     public void setPoint(double point)
+    {
+        _points=point;
+    }
 
     public void setScore(double score){
         _score = score;
