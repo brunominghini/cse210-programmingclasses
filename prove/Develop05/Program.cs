@@ -39,17 +39,18 @@ class Program
             0);
 
 
-        while (_pontuation <= _score)
+        do 
         {
             Console.WriteLine("Write if you achieved this goal? checked: 1-Yes/0-No ");
             string answer = Console.ReadLine();
-            if (_pontuation == _score){
-                Console.WriteLine($"Congratulation, You achieve the {_score}, You reward is");
+            if (_pontuation >= _score){
+                Console.WriteLine($"Congratulation, You achieved the score{_pontuation}, and your score is {_score}, You reward is");
 
             }
             else if (answer == "1")
             {
-                _pontuation = obj.GetGoal();
+                //_pontuation = obj.GetGoal();
+                _pontuation =_pontuation+_point;
             }
             
             else if(answer =="0"){
@@ -57,10 +58,7 @@ class Program
             }
 
         }
-        if (_pontuation > _score){
-                Console.WriteLine($"Congratulation, You achieve the {_score}, You reward is");
-
-        }
+        while (_pontuation <= _score);
 
     }
 }
