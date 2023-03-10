@@ -16,7 +16,6 @@ public class Goal
         
     }
 
-   
   
     public virtual double GetGoal(){
         return 0;

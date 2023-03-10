@@ -34,7 +34,7 @@ public abstract class Point:Goal
 
     public override double GetGoal(){
 
-        return _points*_score;
+        return _points = _points+_points;
 
     }
 
