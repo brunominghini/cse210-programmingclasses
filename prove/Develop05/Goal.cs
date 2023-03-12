@@ -4,8 +4,7 @@ public class Goal
     private string _goal{get;set;}
     private string _time{get;set;}
     private bool _check {get;set;}
-
-    
+ 
     public Goal (string goal,
                  string time,
                  bool check)
@@ -15,8 +14,6 @@ public class Goal
         _check = check;
         
     }
-
-  
     public virtual double GetGoal(){
         return 0;
     }
