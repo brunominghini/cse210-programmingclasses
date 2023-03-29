@@ -33,29 +33,31 @@ class Program
 
 
 
-            Console.Write("Whats is your name: ");
+            
             nameComment = Console.ReadLine();
 
             Console.Write("Write your comment: ");
             commentWrote = Console.ReadLine();
 
-
+            
             videosList.Add(new Video(titleVideo,
                                      authorVideo,
                                     lengthVideo, nameComment, commentWrote));
             /*videosList.Add(video._title);
             videosList.Add(video._author);
             videosList.Add(video._length);*/
-
             cont = cont + 1;
+
+          foreach (var item in videosList)
+            {
+                Console.WriteLine($"Title: {titleVideo}, Author: {authorVideo}, Length: {lengthVideo}");
+                Console.WriteLine($"Name of Comment: {nameComment}");
+                Console.WriteLine();
+            }
 
         }
         
-        foreach (var item in videosList)
-            {
-                Console.WriteLine($"Title: {titleVideo}, Author: {authorVideo}, Length: {lengthVideo}");
-                Console.WriteLine();
-            }
+        
 
     }
 }
