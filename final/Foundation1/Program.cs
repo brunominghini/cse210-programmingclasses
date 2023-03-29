@@ -18,7 +18,6 @@ class Program
 
         while (cont < 3)
         {
-
             Console.Write("Whats the title of video:");
             //video._title = Console.ReadLine();
             titleVideo = Console.ReadLine();
@@ -31,15 +30,11 @@ class Program
             //video._length = Convert.ToInt16(Console.ReadLine());
             lengthVideo = Convert.ToInt16(Console.ReadLine());
 
-
-
-            
             nameComment = Console.ReadLine();
 
             Console.Write("Write your comment: ");
             commentWrote = Console.ReadLine();
-
-            
+ 
             videosList.Add(new Video(titleVideo,
                                      authorVideo,
                                     lengthVideo, nameComment, commentWrote));

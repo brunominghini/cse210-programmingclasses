@@ -1,4 +1,5 @@
-public class Customer{
+public class Customer:Address
+{
     private string name;
     Address address = new Address();
 
@@ -10,6 +11,5 @@ public class Customer{
         return name;
 
     }
-
 
 }
