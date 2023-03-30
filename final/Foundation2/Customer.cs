@@ -4,8 +4,8 @@ public class Customer:Address
     Address address = new Address();
 
     public void setName(string _name){
+ 
         name = _name;
-
     }
     public string getName(){
         return name;
