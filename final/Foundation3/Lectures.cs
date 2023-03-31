@@ -20,7 +20,7 @@ public class Lecture:Event{
 
     public string LectureDetails(){
         string lectureDetails;
-        lectureDetails = "Speaker"+ GetSpeaker() + "Capacity:"+ GetCapacity();
+        lectureDetails = "Speaker: "+ GetSpeaker() +".\n"+ "Capacity:"+ GetCapacity();
         return lectureDetails;
 
 
