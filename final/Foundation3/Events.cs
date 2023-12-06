@@ -1,5 +1,4 @@
 public class Event{
-
     private string typeEvent;
     private string title;
     private string description;

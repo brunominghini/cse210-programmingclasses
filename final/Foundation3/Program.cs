@@ -62,8 +62,6 @@ class Program
                 details = lecture.ShortDescription();
                 Console.WriteLine($"Short description \n {typeEvent} - {details}");
             }
-
-            
         }
         else if (typeEvent == "Reception")
         {
